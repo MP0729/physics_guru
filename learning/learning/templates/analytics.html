@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-10 bg-gray-100">
+
+<h1 class="text-3xl font-bold mb-6">📊 Performance Analytics</h1>
+
+<div class="bg-white p-6 rounded shadow">
+{% for r in results %}
+<p class="text-red-600">
+{{ r.question__topic__name }} — {{ r.total }} mistakes
+</p>
+{% empty %}
+<p class="text-green-600">Excellent performance 🎉</p>
+{% endfor %}
+</div>
+
+</body>
+</html>
